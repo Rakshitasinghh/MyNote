@@ -1,0 +1,15 @@
+.list-container {
+  margin-top: 8px;
+}
+
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.empty-state {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #6b7280;
+}

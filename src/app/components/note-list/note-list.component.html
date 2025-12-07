@@ -1,0 +1,16 @@
+<div class="list-container" *ngIf="notes && notes.length; else empty">
+  <div class="list-grid">
+    <app-note-card
+      *ngFor="let note of notes"
+      [note]="note"
+      (edit)="onEdit($event)"
+      (delete)="onDelete($event)"
+    ></app-note-card>
+  </div>
+</div>
+
+<ng-template #empty>
+  <div class="empty-state">
+    <p>No notes yet. Add your first note.</p>
+  </div>
+</ng-template>

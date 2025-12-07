@@ -1,0 +1,12 @@
+<div class="notes-page">
+  <app-note-editor
+    [selectedNote]="selectedNote"
+    (save)="handleSave($event)"
+  ></app-note-editor>
+
+  <app-note-list
+    [notes]="notes"
+    (edit)="handleEdit($event)"
+    (delete)="handleDelete($event)"
+  ></app-note-list>
+</div>

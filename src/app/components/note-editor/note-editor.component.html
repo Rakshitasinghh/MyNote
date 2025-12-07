@@ -1,0 +1,32 @@
+<div class="editor-card">
+  <h2 class="editor-title">
+    {{ selectedNote ? 'Edit Note' : 'New Note' }}
+  </h2>
+
+  <form (ngSubmit)="onSubmit()" class="editor-form">
+    <input
+      type="text"
+      [(ngModel)]="title"
+      name="title"
+      placeholder="Title"
+      class="editor-input"
+    />
+
+    <textarea
+      [(ngModel)]="content"
+      name="content"
+      rows="6"
+      placeholder="Write your note..."
+      class="editor-textarea"
+    ></textarea>
+
+    <div class="editor-actions">
+      <button type="submit" class="btn primary">
+        {{ selectedNote ? 'Update' : 'Add Note' }}
+      </button>
+      <button type="button" class="btn secondary" (click)="clearSelection()">
+        Clear
+      </button>
+    </div>
+  </form>
+</div>
