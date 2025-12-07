@@ -8,5 +8,4 @@ export const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'notes', component: NotesComponent },
   { path: 'settings', component: SettingsComponent },
-  { path: '**', redirectTo: 'dashboard' }
 ];
